@@ -10,9 +10,11 @@ public class pooling {
     public pooling(int Size){
         this.Size = Size;
         work = new PerformanceTask[this.Size];
-        for (int i = 0; i < Size; i++) {
+        int i =0;
+        while ( i < Size) {
             work[i] = new PerformanceTask("Thread " + i);
             work[i].start();
+            i++;
         }
     }
 
