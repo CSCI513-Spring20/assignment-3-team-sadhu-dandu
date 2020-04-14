@@ -17,18 +17,19 @@ public class pooling {
             i++;
         }
     }
-
+   //method  to synchronize  threads and executes threads
     public void taskexecution(Task task) {
         synchronized (list) {
             list.add(task);
             list.notify();
         }
     }
+    //Method to terminate threads
     public void shutdown() {
         this.isShutdown = true;
     }
-    //boolean isShutdown = true;
-
+    
+    // class extending the thread
     private class PerformanceTask extends Thread {
         public PerformanceTask(String name)
         {
