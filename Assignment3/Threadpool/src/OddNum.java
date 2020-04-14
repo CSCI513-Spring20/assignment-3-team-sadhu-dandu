@@ -19,7 +19,7 @@ abstract class Task implements Runnable{
         isCompleted = true;
     }
 }
-
+// class for generating task and subclass of Task 
 public class OddNum extends Task {
     private int start,end;
     private ArrayList<Integer> OddNumbers;
